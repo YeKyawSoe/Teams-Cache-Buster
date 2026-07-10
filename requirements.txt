@@ -1,0 +1,4 @@
+psutil==5.9.8
+pyinstaller==6.10.0
+pytest==8.3.2
+
