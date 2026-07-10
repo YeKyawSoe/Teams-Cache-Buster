@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+env/
+build/
+dist/
+artifacts/
+*.spec
+*.log
+*.tmp
+*.pdb
+.DS_Store
+
