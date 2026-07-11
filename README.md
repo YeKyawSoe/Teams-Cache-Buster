@@ -54,8 +54,10 @@ pwsh ./scripts/build.ps1 -Configuration Debug -Portable
 
 ## CI and release flow
 
-- GitHub Actions runs on `windows-latest`
-- Pushes run tests, build the app, and smoke-test the executable
+- GitHub Actions workflow: `.github/workflows/build.yml`
+- Runs on `windows-latest`
+- Pushes and pull requests run tests, build the app, and smoke-test the executable
+- Workflow dispatch lets you run the job manually from the Actions tab
 - Releases can sign the EXE and MSI, verify signatures, run Microsoft Defender, and publish SHA-256 checksums
 
 ## Signing and release inputs
@@ -73,4 +75,3 @@ Provide these through CI secrets or environment variables:
 
 - The app is intended for Windows only
 - Antivirus and SmartScreen warnings cannot be eliminated entirely, but the build follows standard Windows distribution practices to reduce false positives
-
